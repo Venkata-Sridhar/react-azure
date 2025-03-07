@@ -34,3 +34,4 @@ pipeline:
                     repo: https://hub.docker.com/r/venkatasridhar/testingharness
                     tags:
                       - first-test
+                    caching: true
