@@ -11,14 +11,14 @@ pipeline:
         build: <+input>
   stages:
     - stage:
-        name: buildAndPush
-        identifier: buildAndPush
+        name: Buildand Push
+        identifier: Buildand_Push
         description: ""
         type: CI
         spec:
           cloneCodebase: true
           platform:
-            os: Linux
+            os: Windows
             arch: Arm64
           runtime:
             type: Docker
@@ -31,7 +31,6 @@ pipeline:
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: Docker_connector
-                    repo: https://hub.docker.com/r/venkatasridhar/testingharness
+                    repo: docker.io/venkatasridhar301298/first-harness-image
                     tags:
-                      - first-test
-                    caching: true
+                      - testing
